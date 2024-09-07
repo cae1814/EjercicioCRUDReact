@@ -3,13 +3,17 @@ import axios from "axios";
 
 export const EjercicioCrudReact = () => {
   const [data, setData] = useState([]);
-  
+    
   const Load = async () => {
     const url = 'https://api.escuelajs.co/api/v1/users';
     const result = await axios.get(url);
     const resultData = await result;
     setData(resultData.data);    
 }
+
+const handleError = (e) => {
+  e.target.src = '../assets/img/unkuser.jpg';
+};
 
 useEffect(() => {
   Load();
@@ -63,7 +67,7 @@ useEffect(() => {
                   {data.map((item) => (
                   <tr key={item.id}>
                     <td scope="row">{item.id}</td>
-                    <td> <div className="text-center"><img src={item.avatar} width="40px" className="rounded" alt="..."/></div></td>                    
+                    <td> <div className="text-center"><img src={item.avatar} width="40px" className="rounded" alt="..." onError={handleError} /></div></td>                    
                     <td> {item.name} </td>
                     <td> {item.password} </td>
                     <td> {item.email} </td>
