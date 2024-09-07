@@ -8,6 +8,7 @@ export const App = () => {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path='/' element={<EjercicioCrudReact/>}  />
           <Route path='/EjercicioReactJs' element={<EjercicioReactJs/>}  />
           <Route path='/ejercicioReactJS2' element={<EjercicioReactJs2/>} />
           <Route path='/EjercicioCrudReact' element={<EjercicioCrudReact/>} />
