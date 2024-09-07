@@ -64,13 +64,16 @@ export const EjercicioReactJs2 = () => {
         <nav className="nav nav-pills nav-fill">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link" href="/">Home</a>
+              <a className="nav-link" href="/EjercicioCrudReact">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/">Ejercicio React Js</a>
+              <a className="nav-link" aria-current="page" href="/EjercicioReactJs">Ejercicio React Js</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/ejercicioReactJS2">Ejercicio React Js2</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" aria-current="page" href="/EjercicioCrudReact">Ejercicio CRUD React</a>
             </li>
           </ul>
         </nav>
