@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import {alerta} from "../js/functions.js";
 
 export const EjercicioCrudReact = () => {
   const [data, setData] = useState([]);
@@ -46,7 +45,7 @@ useEffect(() => {
               <div className="row h4 pb-1 mb-5 border-bottom border-danger font-size-12 font-family-app">Listado de Usuarios</div>
             <div className="row g-3 align-items-center">
               <div className="row col-lg-12 col-md-12 col-sm-12">
-              <div class="bd-example">
+              <div className="bd-example">
                 <table className="table table-hover">
                   <thead>
                     <tr>
