@@ -12,7 +12,16 @@ export function alerta(msg, icon) {
     });
 
     function onfocus() {
-        document.getElementById('nota1').focus();
-        
+        document.getElementById('nota1').focus();        
     }
+}
+
+export function alertReactCrud(msg, icon) {
+    const MySwal = withReactContent(Swal);
+    MySwal.fire({title: msg,
+        icon: icon,
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true,
+    });
 }

@@ -3,13 +3,17 @@ import axios from "axios";
 
 export const EjercicioCrudReact = () => {
   const [data, setData] = useState([]);
-  
+    
   const Load = async () => {
     const url = 'https://api.escuelajs.co/api/v1/users';
     const result = await axios.get(url);
     const resultData = await result;
     setData(resultData.data);    
 }
+
+const handleError = (e) => {
+  e.target.src = '../assets/img/unkuser.jpg';
+};
 
 useEffect(() => {
   Load();
@@ -21,7 +25,7 @@ useEffect(() => {
         <nav className="nav nav-pills nav-fill">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link" href="/EjercicioCrudReact">Home</a>
+              <a className="nav-link" href="/">Home</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="/EjercicioReactJs">Ejercicio React Js</a>
@@ -31,6 +35,9 @@ useEffect(() => {
             </li>
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/EjercicioCrudReact">Ejercicio CRUD React</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" aria-current="page" href="/EjercicioCrudReactP2">Ejercicio CRUD React p2</a>
             </li>
           </ul>
         </nav>
@@ -63,7 +70,7 @@ useEffect(() => {
                   {data.map((item) => (
                   <tr key={item.id}>
                     <td scope="row">{item.id}</td>
-                    <td> <div className="text-center"><img src={item.avatar} width="40px" className="rounded" alt="..."/></div></td>                    
+                    <td> <div className="text-center"><img src={item.avatar} width="40px" className="rounded" alt="..." onError={handleError} /></div></td>                    
                     <td> {item.name} </td>
                     <td> {item.password} </td>
                     <td> {item.email} </td>

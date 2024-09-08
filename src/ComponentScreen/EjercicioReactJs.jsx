@@ -69,7 +69,7 @@ export const EjercicioReactJs = () => {
         <nav className="nav nav-pills nav-fill">
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a className="nav-link" href="/EjercicioCrudReact">Home</a>
+              <a className="nav-link" href="/">Home</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/EjercicioReactJs">Ejercicio React Js</a>
@@ -79,6 +79,9 @@ export const EjercicioReactJs = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="/EjercicioCrudReact">Ejercicio CRUD React</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" aria-current="page" href="/EjercicioCrudReactP2">Ejercicio CRUD React p2</a>
             </li>
           </ul>
         </nav>
